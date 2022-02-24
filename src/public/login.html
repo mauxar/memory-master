@@ -1,0 +1,91 @@
+<!--Innicio de la pagina-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://kit.fontawesome.com/64d58efce2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./CSS/styleLoginSigup.css" />
+    <link rel="stylesheet" href="./AVISO/aviso.css">
+    <script src="./AVISO/aviso.js"></script>
+    <title>Login</title>
+  </head>
+  <body>
+    <!--Inicio del body-->
+    <div class="container">
+      <div class="forms-container">
+        <div class="signin-signup">
+          <!--Fomulario de inicio de sesion-->
+          <form action="auth" method="POST" class="sign-in-form">
+            <h2 class="title">Inicio de sesión</h2>
+            <!--Username-->
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="username"  required/>
+            </div>
+            <!--Password-->
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="password" required/>
+            </div>
+            <div class='cuerpo'>
+              <!-- Sentencia para abrir el Aviso de Privacidad -->
+              <a class="btn solid" onclick='abrirAviso();' id="btn_privacy" href='javascript:void(0);'>Aviso de privacidad</a>
+            </div>
+            <input type="submit" value="Login" id="btn_login" class="btn solid" required />
+          </form>
+          <!--Formulario de registrar-->
+          <form action="registrar" method="POST" class="sign-up-form">
+            <h2 class="title">Registrarse</h2>
+            <!--Nombre-->
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Nombre" name="name"/>
+            </div>
+            <!--Apellido paterno-->
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Apellido paterno" name="appat"/>
+            </div>
+            <!--Apellido materno-->
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Apellido materno" name="apmat"/>
+            </div>
+            <!--User-->
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" name="user"/>
+            </div>
+            <!--Password-->
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" name="password"/>
+            </div>
+            <input type="submit" class="btn" value="Sign Up" />
+          </form>
+        </div>
+      </div>
+      <!--Moverse entre las paginas-->
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>¿Eres nuevo aquí?</h3>
+            <p>¡Ven y registrate!</p>
+            <button class="btn transparent" id="sign-up-btn">Registrate</button>
+          </div>
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>¿Eres uno de nosotros?</h3>
+            <p>¡Bienvenido de vuelta!</p>
+            <button class="btn transparent" id="sign-in-btn">
+              Iniciar Sesión
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./JS/accionesLogin.js"></script>
+  </body>
+</html>

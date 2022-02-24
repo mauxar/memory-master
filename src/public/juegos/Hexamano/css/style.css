@@ -1,0 +1,43 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: right;
+    flex-flow: column;
+    min-height: 100vh;
+    right: 100px;
+   
+}
+
+#maincontainer{
+    position: relative;
+    color: rgb(5, 5, 5);
+    background:linear-gradient(to right, #b8b4b4, hsl(170, 100%, 39%));;
+    width: 700px;
+    height: 500px;
+    padding: 100px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.palabra{
+    position: absolute;
+    font-weight: 100;
+}
+.palabra span{
+    font-weight: 300;
+}
+#maincontainer .palabra:nth-child(1){
+    top: 50px;
+    left: 70px;
+}
+#maincontainer .palabra:nth-child(2){
+    top: 110px;
+    left: 370px;
+}
+#maincontainer .palabra:nth-child(3){
+    top: 60px;
+    left: 870px;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/Cssjuegos.css">
+    <title>FÁCIL</title>
+    <script src="./RepeticióndePalabras/js/codigo.js"></script>
+</head>
+<body>
+   
+    <header class="bg_animate">
+        <div class="header_nav">
+            <div class="contenedor">
+                <h1>MemoryMaster</h1>
+               
+            </div>
+        </div>
+
+     
+            <section class="banner contenedor">
+          
+        <div class="container grid-sm">
+            <div class="columns">
+                <div class="column">
+                    <form onsubmit="comprobar();event.preventDefault()" action="">
+                        <div class="form-group">
+                            <div class="hero hero-sm">
+                                <div class="hero-body">
+                                    <h1>Adivina la palabra</h1>
+                                    <br>
+                                    <p>Tienes <span id="intentos">3</span> intentos</p>
+                                    <br>
+                                </div>
+                            </div>
+                            <div>
+                                <audio controls>
+                                    <source src="./RepeticióndePalabras/audio/av (online-audio-converter.com).mp3" type="audio/mp3">
+                                </audio>
+                            </div>
+                            
+                        </div>
+    
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">Escribe la palabra que escuchaste</span>
+                                <input id="palabra_1" type="text" class="form-input" placeholder="">
+                                <button type="submit" class="btn btn-primary input-group-btn">Comprobar</button>
+                              </div>
+                        </div>
+    
+                        <div class="form-group">
+                            
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+            
+
+        </div><div id="volver"><a href="../JuegosEB.html" id="vuevle"><input type="submit" value="Volver" class="btn solid" /></a></div>
+        </article>
+    </section>
+        
+    <div class="burbujas">
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+            <div class="burbuja"></div>
+        </div>
+    </header>
+    
+</body>
+</html>
