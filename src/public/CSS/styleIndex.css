@@ -18,6 +18,18 @@ body{
     top: 50px;
 }
 
+
+.conte{
+    width: 90%;
+    max-width: 100px;
+    margin: auto;
+    padding-left: 170px;
+    position: fixed;
+    left: 300px;
+    top: 50px;
+    font-size: 40px;
+}
+
 .contenedor1{
     width: 90%;
     max-width: 1200px;
@@ -143,7 +155,6 @@ body{
     position: fixed;
     left: 200px;
     top: 250px;
-    href='./Estresado.html';
 }
 
 

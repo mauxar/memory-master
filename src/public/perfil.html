@@ -116,6 +116,7 @@ body {
     width: 70%;
     position: relative;
     max-width: 750px;
+    justify-content: center;
 }
 
 .seccion-perfil-usuario .perfil-usuario-body .titulo {
@@ -250,6 +251,68 @@ body {
     background: linear-gradient(90deg, #fc72a7, #fc7c55);
 }
 
+/*cambios de rediseño 2.0*/
+  .loader{
+      position: relative;
+      display: flex;
+      justify-content: center;
+  }
+
+  .loader span{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background: #eaeef0;
+    border-radius: 50%;
+    border: 6px solid #eaeef0;
+    box-shadow: -8px -8px 15px rgba(255, 255, 255, 1),
+    8px 8px 15px rgba(0, 0, 0, 0.2),
+    inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 5px rgba(255, 255, 255, 1);
+  }
+
+  .loader span::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #5c89ff;
+    border-radius: 50%;
+    box-shadow: inset 3px 3px 5px rgba(0, 0, 0, 0.1),
+    inset -1px -1px 5px rgba(255, 255, 255, 1);
+    transform: scale(0);
+    animation: animatebar 2.5s linear infinite, animateColor
+    5s linear infinite;
+    animation-delay: calc(var(--i) * 0.2s);
+  }
+
+  /*keyframe para la animacion de la barra de carga*/
+  @keyframes animatebar{
+    0%, 9.99%, 70.0001%
+    {
+      transform: scale(0);
+    }
+    10%, 70%
+    {
+      transform: scale(1);
+    }
+  }
+
+  /*keyframe para la animacion de cambio de colores en la barra de carga*/
+  @keyframes animateColor{
+    0% 
+    {
+      filter: hue-rotate(0deg);
+    }
+    100% 
+    {
+      filter: hue-rotate(360deg);
+    }
+  }
+
 </style>
 
     <section class="seccion-perfil-usuario">
@@ -264,28 +327,38 @@ body {
         </div>
         <div class="perfil-usuario-body">
             <div class="perfil-usuario-bio">
-                <h3 class="titulo"></h3>
-                <p class="texto"></p>
+                <h3 class="titulo">¡Bienvenidos al perfil del admin Technet_5004!</h3>
+                <p class="texto">Mis avances más notables han sido en juegos de memoria muscular, ¡pueden creerlo!
+                    No puedo esperar a subir aún más mi puntaje :D
+                </p>
             </div>
             <div class="perfil-usuario-footer">
                 <ul class="lista-datos">
-                    <li><i class="icono fas fa-map-signs"></i> Direccion de usuario:</li>
-                    <li><i class="icono fas fa-phone-alt"></i> Telefono:</li>
-                    <li><i class="icono fas fa-briefcase"></i> Trabaja en.</li>
-                    <li><i class="icono fas fa-building"></i> Cargo</li>
+                    <li><i class="icono fas fa-user-check"></i>Nombre de usuario: Technet_5004:</li>
                 </ul>
                 <ul class="lista-datos">
-                    <li><i class="icono fas fa-map-marker-alt"></i> Ubicacion.</li>
-                    <li><i class="icono fas fa-calendar-alt"></i> Fecha nacimiento.</li>
-                    <li><i class="icono fas fa-user-check"></i> Registro.</li>
-                    <li><i class="icono fas fa-share-alt"></i> Redes sociales.</li>
+                    <li><i class="icono fas fa-map-signs"></i> Puntaje: 413</li>
                 </ul>
             </div>
         </div>
     </section>
-    <center><div><input type="submit" value="Editar" class="btn solid"/></div></center>
-    <div id="volver"><a href="menu.html" id="vuelve"><input type="submit" value="Volver" class="btn solid" id="btn_vuelve" /></a></div>
-    <div id="cerrar"> <a href="login.html" id="close"><input type="submit" value="Cerrar sesión" class="btn solid" id="btn_close" ></a></div>
+    <br>
+    <center><input type="submit" value="Editar" class="btn solid"/> <a href="login.html" id="close"><input type="submit" value="Cerrar sesión" class="btn solid" id="btn_close" ></a></center>
+    <br>
+    <!--Inicio del div para la animacion de barra de carga-->
+    <div class="loader" >
+        <span style="--i:0;"></span>
+        <span style="--i:1;"></span>
+        <span style="--i:2;"></span>
+        <span style="--i:3;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:6;"></span>
+    </div>
+    <br>
+    <div class="bannerreturn_img">
+        <a href="menu.html"><img src="./img/return.png"></a>
+    </div>
 </body>
 
 </html>

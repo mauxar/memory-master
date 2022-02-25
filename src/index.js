@@ -155,6 +155,7 @@ app.get('/menu', function(request, response) {
 
 	if (request.session.loggedin) {
     var html= "";
+    /*
 html+="<!DOCTYPE html>";
 html+="<html lang='en'>";
 html+="  <head>";
@@ -207,7 +208,82 @@ html+="        </div>";
 html+="    </header>";
 html+="  </body>";
 html+="</html>";
+html+="";*/
+
+
+html+="<!DOCTYPE html>";
+html+="<html lang='en'>";
+html+="<head>";
+html+="    <meta charset='UTF-8'>";
+html+="    <meta http-equiv='X-UA-Compatible' content='IE=edge'>";
+html+="    <meta name='viewport' content='width=device-width, initial-scale=1.0'>";
+html+="    <link rel='stylesheet' href='./CSS/styleIndex.css'>";
+html+="    <title>Index</title>";
+html+="</head>";
+html+="<body>";
+html+="    <header class='bg_animate'>";
+html+="        <div class='header_nav'>";
+html+="            <div class='contenedor'>";
+html+="                <h1>MemoryMaster</h1>";
+html+="            </div>";
+html+="            <div class='conte'>";
+html+="                <h1>Bienvenido&nbsp"+request.session.username+"</h1>";
+html+="            </div>";
+html+="           ";
+html+="              <section class='contenedor1'>";
+html+="                  <a href='perfil.html'><img src='./img/4781818_account_avatar_face_man_people_icon.png' alt=''></a>";
+html+="                </section>";
+html+="              ";
+html+="        </div>";
+html+="                   ";
+html+="            ";
+html+="        ";
+html+="        <div>";
+html+="            <section class='banner contenedor'>";
+html+="                <div class='banner_title1'>";
+html+="                    <figure>";
+html+="                    <a href='./Estresado.html' class='llamanos'><img src='./img/6056530_people_person_stress_tired_woman_icon (2).png' alt=''></a>";
+html+="                    <div class='capa1'><h1>Juegos para desestresar</h1></div>  ";
+html+="                    <div class='capaa1'><a href='./Estresado.html'><h1>Listo?</h1></a></div>           ";
+html+="                    </figure>";
+html+="                </div>";
+html+="                <div class='banner_title2'>";
+html+="                    <figure>";
+html+="                    <img src='./img/2730389_brain_divide_inkcontober_sains_icon.png' alt=''>";
+html+="                    <div class='capa2'><h1>Juegos de memoria</h1></div>";
+html+="                    <div class='capaa2'><a href='tipodememoria.html' class='llamanos'><h1>Listo?</h1></a></div>     ";           
+html+="                    </figure>";
+html+="                </div>";
+html+="                <br>";
+html+="                <div class='banner_title3'>";
+html+="                    <figure>";
+html+="                    <img src='./img/2849821_multimedia_social_speak_chat_media_icon (1).png' alt=''>>";
+html+="                    <div class='capa3'><h1>Chat</h1></div>";
+html+="                    <div class='capaa3'><a href='https://charsito12.herokuapp.com' class='llamanos'><h1>Listo?</h1></a</div>    ";            
+html+="                    </figure>";
+html+="                </div>";
+html+="                               ";
+html+="            </section>";
+html+="        </div>";
 html+="";
+html+="        <div class='burbujas'>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="            <div class='burbuja'></div>";
+html+="        </div>";
+html+="    </header>";
+html+="";
+html+="</body>";
+html+="</html>";
+
+
 		response.send(html);
 	} 
   else{console.log("entro al else")}
